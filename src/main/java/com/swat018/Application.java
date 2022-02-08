@@ -12,10 +12,10 @@ public class Application {
         String username = "jinwoo";
         String password = "pass";
 
-        try(Connection connection = DriverManager.getConnection(url,username,password)) {
-            System.out.println("Connection created! " + connection);
+        try(Connection connection = DriverManager.getConnection(url, username, password)) {
+            System.out.println("Conection crfeated: " + connection);
 //            String sql = "CREATE TABLE ACCOUNT (id int, username varchar(255), password varchar(255));";
-            String sql = "INSERT INTO ACCOUNT VALUES(1, 'jinwoo', '1234')";
+            String sql = "INSERT INTO ACCOUNT VALUES(1, 'jinwoo', 'pass');";
             try(PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.execute();
             }
